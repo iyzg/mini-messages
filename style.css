@@ -1,0 +1,82 @@
+:root {
+    --background: #F7F2EE;
+    --self-message-bg: #C6DEF1;
+    --self-message-border: #A1C7E6;
+    --other-message-bg: #C9E4DE;
+    --other-message-border: #a5cfc6;
+    --input-border: #E7D8CB;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+body {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--background);
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.messages {
+    font-weight: normal;
+    height: 90vh;
+    overflow: scroll;
+}
+
+.message-send {
+    height: 5vh;
+    width: 100%;
+}
+
+.msg-other, .msg-self {
+    display: inline-block;
+    padding: 5px;
+    max-width: 85%;
+    /* border-style: dashed; */
+}
+
+.msg-other {
+    /* background-color: ; */
+    display: flex; 
+    justify-content: flex-start;
+}
+
+.msg-other p {
+    border-style: dashed;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--other-message-bg);
+    border-color: var(--other-message-border);
+    max-width: 100%;
+}
+
+.msg-self {
+    display: flex; 
+    justify-content: flex-end;
+    margin-left: auto;
+    text-align: right;
+}
+
+.msg-self p {
+    border-style: dashed;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--self-message-bg);
+    border-color: var(--self-message-border);
+}
+
+.message-send {
+  background-color: var(--background);
+  border-style: dashed;
+  border-radius: 10px;
+  border-color: var(--input-border);
+  padding: 10px;
+  outline: none;
+}
